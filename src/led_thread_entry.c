@@ -1,4 +1,5 @@
 #include "led_thread.h"
+#include "debug.h"
 void led_thread_entry(void *pvParameters)
 {
     FSP_PARAMETER_NOT_USED(pvParameters);
@@ -21,6 +22,7 @@ void led_thread_entry(void *pvParameters)
             led_level = BSP_IO_LEVEL_HIGH;
         }
         xSemaphoreTake(g_sw1_semaphore, portMAX_DELAY);
+        log_error("SemaphoreTake %f!\r\n",-0.01234);
     }
 }
 /* callback function for the SW1 push button; sets the semaphore */

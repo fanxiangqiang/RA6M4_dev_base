@@ -27,7 +27,7 @@
  * Includes   <System Includes> , "Project Includes"
  **********************************************************************************************************************/
 #include "bsp_api.h"
-
+#include "SEGGER_RTT.h"
 /***********************************************************************************************************************
  * Macro definitions
  **********************************************************************************************************************/
@@ -62,7 +62,8 @@ void Reset_Handler (void)
 {
     /* Initialize system using BSP. */
     SystemInit();
-
+    SEGGER_RTT_Init();
+    SEGGER_RTT_printf(0, "Hello world !\r\n");
     /* Call user application. */
     main();
 

@@ -425,5 +425,8 @@ void OS_SIM_LeaveCriticalSection(void);
   #define SEGGER_RTT_UNLOCK()              // Unlock RTT (nestable) (i.e. enable previous interrupt lock state)
 #endif
 
+#ifndef SEGGER_RTT_PRINT_FLOAT_ENABLE
+    #define SEGGER_RTT_PRINT_FLOAT_ENABLE                 (1)
+#endif
 #endif
 /*************************** End of file ****************************/
