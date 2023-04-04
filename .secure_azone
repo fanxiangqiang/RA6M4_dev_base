@@ -60,5 +60,11 @@
             <slot name="P712" secure="false"/>
             <slot name="P713" secure="false"/>
         </peripheral>
+        <peripheral name="ICU_EXT_IRQ">
+            <slot name="ICU_EXT_IRQ0" secure="false"/>
+        </peripheral>
+        <peripheral name="ICU">
+            <slot name="IRQ0" secure="false"/>
+        </peripheral>
     </partition>
 </azone>
