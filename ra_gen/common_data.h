@@ -5,6 +5,10 @@
 #include "bsp_api.h"
 #include "FreeRTOS.h"
 #include "semphr.h"
+#include "mbedtls/platform.h"
+#include "psa/crypto.h"
+#include "psa/crypto_extra.h"
+#include "rm_psa_crypto.h"
 #include "r_ioport.h"
 #include "bsp_pin_cfg.h"
 FSP_HEADER
