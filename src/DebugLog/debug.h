@@ -7,7 +7,7 @@
     /* RTT 终端号 */
     #define RTT_DBG_PORT        0
     #define LOG_PROTO(color,format,...)                        \
-            SEGGER_RTT_printf(RTT_DBG_PORT,"%s%s"format"%s",    \
+            SEGGER_RTT_printf(RTT_DBG_PORT,"%s"format"%s",    \
                             color,                                  \
                             ##__VA_ARGS__,                          \
                             RTT_CTRL_RESET)
